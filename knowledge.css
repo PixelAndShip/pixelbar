@@ -1,0 +1,145 @@
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    --section-spacing: 10rem; /* Define the spacing between sections */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #141414;
+
+    background-size: cover; /* Cover the entire area */
+    z-index: -1; /* Ensure it is behind all other content */
+}
+
+.title {
+    text-shadow: 
+        0 0 5px rgb(249, 253, 16),
+        0 0 5px rgb(224, 137, 5),
+        0 0 5px rgb(255, 158, 12),
+        0 0 10px rgb(182, 185, 10),
+        0 0 10px rgb(211, 103, 15),
+        0 0 10px rgb(218, 201, 54);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem;
+    font-size: 3rem;
+    background-image: linear-gradient(to top, #fbff27, #9ea013, #ebaf0d, #d36b0b);
+    background-size: 100% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: wave 10s infinite linear;
+}
+/* Define the keyframes for the wave animation */
+@keyframes wave {
+    0% {
+        background-position: 50% 0%;
+    }
+    100% {
+        background-position: 50% 100%;
+    }
+}
+
+
+
+
+
+.create__post {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.create__post__container {
+    box-shadow: 0 0 20px rgba(255, 238, 2, 0.945); /* Optional: Add a glow effect */
+    position: relative;
+    background: transparent;
+    width: 800px;
+    height: 550px;
+    border: 4px solid #e99b0a;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+}
+.create__post__container h1 {
+    margin-bottom: 3rem;/* Remove default margin */
+    text-align: center; /* Center text */
+    margin-top: auto;
+    font-size: 3rem;
+    
+    background-color:#e4e01a;
+    background-image: linear-gradient(to top, #e0dd1a 0%, #c7680f);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
+}
+
+.create__post__container button {
+    margin-top: auto;
+    border: none;
+    background-color: #f1de2a;
+    color: white;
+    border-radius: 10px;
+    width: 100%;
+    height: 30%;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.create__post__container button:hover {
+    background-color: #e99312; /* Darker green on hover */
+}
+
+
+
+.text-area-container {
+    
+    position: relative;
+    width: 100%; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    border: 2px solid #df9c0c;
+    border-radius: 10px;
+    overflow: hidden; /* Hide scrollbars */
+}
+
+.text-area-container textarea {
+    color: #96fdf8;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    padding: 5px; /* Adjust padding to move text */
+    border: none;
+    outline: none;
+    resize: none; /* Prevent resizing */
+    box-sizing: border-box; /* Include padding in width and height */
+    font-size: 1rem; /* Adjust font size */
+    line-height: 1.5; /* Adjust line height */
+    overflow: hidden; /* Hide overflow text */
+}
+
+.text-area-container textarea.limit-reached {
+    border: 2px solid red; /* Change border color */
+}

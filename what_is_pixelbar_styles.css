@@ -1,0 +1,134 @@
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    --section-spacing: 10rem; /* Define the spacing between sections */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #141414;
+    background-size: cover; /* Cover the entire area */
+    z-index: -1; /* Ensure it is behind all other content */
+}
+
+.title {
+    text-shadow: 
+        0 0 5px #0ff,
+        0 0 5px rgb(0, 255, 242),
+        0 0 5px rgb(12, 146, 255),
+        0 0 10px rgb(74, 166, 241),
+        0 0 10px rgb(5, 53, 124),
+        0 0 10px rgb(35, 211, 255);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem;
+    font-size: 3rem;
+    background-image: linear-gradient(to top, #2aff4e, #5ffff7, #2aff4e, #5ffff7);
+    background-size: 100% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: wave 10s infinite linear;
+}
+
+/* Define the keyframes for the wave animation */
+@keyframes wave {
+    0% {
+        background-position: 50% 0%;
+    }
+    100% {
+        background-position: 50% 100%;
+    }
+}
+
+.pixelbar__txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+    height: auto; /* Allow the container to adjust height based on content */
+  
+    overflow-y: hidden; /* Hide overflow to prevent unnecessary scrollbar */
+    position: relative; /* Ensure positioning context */
+
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent; /* Firefox */
+}
+
+.pixelbar__txt h1 {
+    box-shadow: 0 0 20px rgba(5, 211, 226, 0.945); /* Optional: Add a glow effect */
+    background: transparent;
+    width: 90%; /* Limit the width to prevent overflow */
+    padding: 3rem;
+    text-align: center; /* Center-align the text */
+    color: rgb(146, 255, 255);
+    position: relative; /* Ensure positioning context */
+    z-index: 1; /* Ensure it's above the background */
+
+
+}
+
+.image__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#bar__image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Ensure it's behind other content */
+    
+}
+
+#bar__image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha (last) value for darkness */
+}
+
+
+/* Hide the default scrollbar on Chrome, Safari, Edge */
+.pixelbar__txt::-webkit-scrollbar {
+    width: 0%;
+}
+
+.pixelbar__txt::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.pixelbar__txt::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Adjust the border color and transparency */
+    border-radius: 4px;
+}
+
+/* Optional: Hover styles for the thumb */
+.pixelbar__txt::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust the hover background color and transparency */
+}

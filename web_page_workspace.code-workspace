@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../codrtyr"
+		},
+		{
+			"path": "../js_learning"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "web_start"
+	}
+}
