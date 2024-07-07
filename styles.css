@@ -549,7 +549,7 @@ html {
     background-color: rgba(67, 58, 189, 0.5);
     width: 160%; /* Ensure it takes full width of the grid cell */
     height: 100%; /* Ensure it takes full height of the grid cell */
-    background-image: url("pic3.jpg")  ;
+    background-image: url("pic3.jpg");
     background-size: cover;
     filter: grayscale(100%) sepia(100%) hue-rotate(200deg) saturate(100%);
     background-position: center; /* Centers the image */
