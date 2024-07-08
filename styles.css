@@ -549,7 +549,7 @@ html {
  
     width: 160%; /* Adjusted to fit the viewport or parent element */
     height: 100%; /* Adjusted to fit the full viewport height */
-    background-image: url("https://wallpapers.com/images/hd/jotaro-pictures-kfe067wszezznyu7.jpg"); /* Ensure this is a high-resolution image */
+    background-image: url('https://wallpapers.com/images/hd/jotaro-pictures-kfe067wszezznyu7.jpg'); /* Ensure this is a high-resolution image */
     background-size: cover; /* Ensures the image covers the container */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
